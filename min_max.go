@@ -23,7 +23,11 @@ func main() {
 
 	}
 
-	MinMaxSum(arr)
+	min, max, err := MinMaxSum(arr)
+	if err != nil {
+		fmt.Println(err)
+	}
+	fmt.Printf("minimum: %d, maximum: %d.\n", min, max)
 
 }
 
@@ -49,7 +53,6 @@ func MinMaxSum(origArr []int) (int, int, error) {
 
 	min := arrSum - elemMax
 	max := arrSum - elemMin
-	fmt.Printf("minimum: %v, maximum: %v.\n", min, max)
 
 	return min, max, nil
 }
@@ -76,8 +79,6 @@ func MinMaxSumOld(origArr [5]int) [2]int {
 
 	minSum := slices.Min(sumsArr[0:5])
 	maxSum := slices.Max(sumsArr[0:5])
-
-	fmt.Printf("minimum: %v, maximum: %v.\n", minSum, maxSum)
 
 	return [2]int{minSum, maxSum}
 }
