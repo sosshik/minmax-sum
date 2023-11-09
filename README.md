@@ -15,6 +15,14 @@ Run app(instead of 1 2 3 4 5 you can put your numbers as argument for an array):
 
     go run min_max.go 1 2 3 4 5
 
+Or if you want to run the tests:
+
+    go test
+
+To run benchmark:
+
+    go test -bench=. -benchmem
+
 ### Using as a library
 
 `go get` it:

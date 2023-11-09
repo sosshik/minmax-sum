@@ -70,17 +70,25 @@ func TestMinMaxSum(t *testing.T) {
 }
 
 func BenchmarkMinMaxSum(b *testing.B) {
-
+	arr := []int{40, 19, 84, 84, 0}
 	for i := 0; i < b.N; i++ {
-		MinMaxSum([]int{40, 19, 84, 84, 0})
+		MinMaxSum(arr)
 	}
 
 }
 
-func BenchmarkMinMaxSumOld(b *testing.B) {
-
+func BenchmarkMinMaxSumOld2(b *testing.B) {
+	arr := []int{40, 19, 84, 84, 0}
 	for i := 0; i < b.N; i++ {
-		MinMaxSumOld([5]int{40, 19, 84, 84, 0})
+		MinMaxSumOld2(arr)
+	}
+
+}
+
+func BenchmarkMinMaxSumOld1(b *testing.B) {
+	arr := [5]int{40, 19, 84, 84, 0}
+	for i := 0; i < b.N; i++ {
+		MinMaxSumOld1(arr)
 	}
 
 }
