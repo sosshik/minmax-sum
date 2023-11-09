@@ -19,7 +19,7 @@ func main() {
 
 		if err != nil {
 			fmt.Println("Unable to convert cmd args to int")
-			return
+			os.Exit(1)
 		}
 
 	}
@@ -27,7 +27,7 @@ func main() {
 	min, max, err := MinMaxSum(arr)
 	if err != nil {
 		fmt.Println(err)
-		return
+		os.Exit(1)
 	}
 	fmt.Printf("minimum: %d, maximum: %d.\n", min, max)
 
