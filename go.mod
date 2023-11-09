@@ -1,0 +1,3 @@
+module git.foxminded.ua/foxstudent106264/task-1.2
+
+go 1.21.0
